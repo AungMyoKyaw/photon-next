@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CopyButton from '@/components/CopyButton';
 
 export default function Home() {
   return (
@@ -96,93 +97,107 @@ export default function Home() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                 </div>
               </div>
-              <code className="font-mono text-sm sm:text-base text-left block text-gray-800 dark:text-gray-200">
-                <span className="text-purple-600 dark:text-purple-400">
-                  npx
-                </span>{' '}
-                create-next-app{' '}
-                <span className="text-blue-600 dark:text-blue-400">
-                  --example
-                </span>{' '}
-                <span className="text-green-600 dark:text-green-400">
-                  https://github.com/AungMyoKyaw/photon-next
-                </span>{' '}
-                <span className="text-orange-600 dark:text-orange-400">
-                  my-app
-                </span>
-              </code>
+              <div className="relative">
+                <code className="font-mono text-sm sm:text-base text-left block text-gray-800 dark:text-gray-200">
+                  <span className="text-purple-600 dark:text-purple-400">
+                    npx
+                  </span>{' '}
+                  create-next-app{' '}
+                  <span className="text-blue-600 dark:text-blue-400">
+                    --example
+                  </span>{' '}
+                  <span className="text-green-600 dark:text-green-400">
+                    https://github.com/AungMyoKyaw/photon-next
+                  </span>{' '}
+                  <span className="text-orange-600 dark:text-orange-400">
+                    my-app
+                  </span>
+                </code>
+                <div className="absolute top-0 right-0 p-2">
+                  <CopyButton
+                    text="npx create-next-app --example https://github.com/AungMyoKyaw/photon-next my-app"
+                    className="bg-white/90 dark:bg-black/90 backdrop-blur-sm border-white/20 dark:border-black/20 shadow-sm"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-12 max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
-                <svg
-                  className="w-5 h-5 text-blue-600 dark:text-blue-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-16 max-w-5xl mx-auto">
+            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/20">
+                  <svg
+                    className="w-7 h-7 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Lightning Fast</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Built with Turbopack for blazing fast development and optimized
+                  production builds
+                </p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Lightning Fast</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Built with Turbopack for blazing fast development and optimized
-                production builds
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
-                <svg
-                  className="w-5 h-5 text-purple-600 dark:text-purple-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                  />
-                </svg>
+            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-purple-500/5 dark:hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/20">
+                  <svg
+                    className="w-7 h-7 text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Type-Safe</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Full TypeScript support with strict mode for robust,
+                  maintainable code
+                </p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Type-Safe</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Full TypeScript support with strict mode for robust,
-                maintainable code
-              </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4">
-                <svg
-                  className="w-5 h-5 text-cyan-600 dark:text-cyan-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                  />
-                </svg>
+            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-cyan-500/5 dark:hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/20">
+                  <svg
+                    className="w-7 h-7 text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Modern Styling</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Tailwind CSS v4 with dark mode and custom theme system out of
+                  the box
+                </p>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Modern Styling</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Tailwind CSS v4 with dark mode and custom theme system out of
-                the box
-              </p>
             </div>
           </div>
         </div>
