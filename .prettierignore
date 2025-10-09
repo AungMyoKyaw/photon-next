@@ -1,0 +1,42 @@
+# Ignore artifacts
+node_modules
+.next
+out
+build
+dist
+coverage
+
+# Editor/project config
+.vscode
+.idea
+.cache
+.turbo
+
+# System files
+.DS_Store
+
+# Lockfiles
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# Deployment
+.vercel
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# Generated assets
+public/**/*.png
+public/**/*.jpg
+public/**/*.jpeg
+public/**/*.webp
+public/**/*.avif
+
+# Misc
+.husky
+.github
