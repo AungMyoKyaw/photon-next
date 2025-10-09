@@ -1,0 +1,100 @@
+# .editorconfig - Photon Next (generated)
+# Top-most EditorConfig file for the repository
+root = true
+
+[*]
+# Universal defaults
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+# Advisory: some editors respect this; formatters like Prettier are authoritative
+max_line_length = 120
+
+# JavaScript / TypeScript source files
+[*.{js,jsx,ts,tsx,mjs,cjs}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# JSON configuration and data
+[*.json]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = false
+insert_final_newline = true
+
+# Stylesheets (CSS, PostCSS, Sass, Less)
+[*.{css,scss,sass,less,pcss,postcss}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Markup and vector images
+[*.{html,htm,svg}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Markdown / Docs: preserve trailing spaces for intentional hard breaks
+[*.{md,mdx,markdown}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+insert_final_newline = true
+max_line_length = 80
+
+# YAML (CI, frontmatter, config)
+[*.{yml,yaml}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Shell scripts
+[*.{sh,bash}]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# TypeScript declaration files
+[*.d.ts]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Makefiles require literal TAB characters for recipe lines
+[Makefile]
+indent_style = tab
+trim_trailing_whitespace = false
+insert_final_newline = true
+
+# Binary and asset files — avoid text normalization
+[*.{png,jpg,jpeg,gif,ico,webp,mp4,mp3,zip,woff,woff2,eot,ttf,otf}]
+trim_trailing_whitespace = false
+insert_final_newline = false
