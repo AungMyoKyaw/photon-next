@@ -2,101 +2,260 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-sans min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Logo/Brand */}
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-md opacity-50"></div>
+              <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <span className="text-white font-bold text-2xl sm:text-3xl">
+                  P
+                </span>
+              </div>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Title */}
+          <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+              Photon Next
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            A modern, production-ready Next.js 15 starter template built with
+            React 19, TypeScript, and Tailwind CSS v4
+          </p>
+
+          {/* Tech Stack Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-black dark:bg-white"></span>
+              Next.js 15
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+              React 19
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+              TypeScript
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+              Tailwind v4
+            </span>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
+            <a
+              className="group rounded-full border-2 border-solid border-transparent transition-all flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white gap-2 hover:shadow-lg hover:shadow-blue-500/50 dark:hover:shadow-purple-500/50 hover:scale-105 font-semibold text-sm sm:text-base h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto"
+              href="https://github.com/AungMyoKyaw/photon-next"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              Use This Template
+            </a>
+            <a
+              className="rounded-full border-2 border-solid border-black/[.08] dark:border-white/[.145] transition-all flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-black/[.15] dark:hover:border-white/[.25] font-semibold text-sm sm:text-base h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto"
+              href="https://github.com/AungMyoKyaw/photon-next#readme"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Documentation
+            </a>
+          </div>
+
+          {/* Quick Start Code */}
+          <div className="pt-8 max-w-2xl mx-auto">
+            <div className="bg-black/[.03] dark:bg-white/[.04] rounded-2xl p-6 border border-black/[.08] dark:border-white/[.08]">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                  Quick Start
+                </span>
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                </div>
+              </div>
+              <code className="font-mono text-sm sm:text-base text-left block text-gray-800 dark:text-gray-200">
+                <span className="text-purple-600 dark:text-purple-400">
+                  npx
+                </span>{' '}
+                create-next-app{' '}
+                <span className="text-blue-600 dark:text-blue-400">
+                  --example
+                </span>{' '}
+                <span className="text-green-600 dark:text-green-400">
+                  https://github.com/AungMyoKyaw/photon-next
+                </span>{' '}
+                <span className="text-orange-600 dark:text-orange-400">
+                  my-app
+                </span>
+              </code>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-12 max-w-5xl mx-auto">
+            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
+                <svg
+                  className="w-5 h-5 text-blue-600 dark:text-blue-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Lightning Fast</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Built with Turbopack for blazing fast development and optimized
+                production builds
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
+                <svg
+                  className="w-5 h-5 text-purple-600 dark:text-purple-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Type-Safe</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Full TypeScript support with strict mode for robust,
+                maintainable code
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center mb-4">
+                <svg
+                  className="w-5 h-5 text-cyan-600 dark:text-cyan-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                  />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Modern Styling</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Tailwind CSS v4 with dark mode and custom theme system out of
+                the box
+              </p>
+            </div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="border-t border-black/[.08] dark:border-white/[.08] py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+              <span>Built with</span>
+              <Image
+                className="dark:invert"
+                src="/next.svg"
+                alt="Next.js"
+                width={60}
+                height={12}
+              />
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <a
+                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                href="https://github.com/AungMyoKyaw/photon-next"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a
+                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                href="https://nextjs.org/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  aria-hidden
+                  src="/file.svg"
+                  alt="Docs"
+                  width={14}
+                  height={14}
+                />
+                Docs
+              </a>
+              <a
+                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                href="https://vercel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  className="dark:invert"
+                  src="/vercel.svg"
+                  alt="Vercel"
+                  width={16}
+                  height={16}
+                />
+                Deploy
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
