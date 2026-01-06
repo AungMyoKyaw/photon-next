@@ -246,7 +246,7 @@ export default function Home() {
                 P
               </div>
               <p className="text-center text-base text-foreground/60">
-                &copy; 2024 Photon Next. Open Source.
+                &copy; {new Date().getFullYear()} Photon Next. Open Source.
               </p>
             </div>
           </div>
