@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Photon Next - Modern Next.js 15 Starter Template',
+  title: 'Photon Next - Modern Next.js 16 Starter Template',
   description:
-    'A production-ready Next.js 15 starter template built with React 19, TypeScript, and Tailwind CSS v4. Start building your next project with the latest technologies and best practices.'
+    'A production-ready Next.js 16 starter template built with React 19, TypeScript, and Tailwind CSS v4. Start building your next project with the latest technologies and best practices.'
 };
 
 export default function RootLayout({

@@ -3,16 +3,16 @@ import CopyButton from '@/components/CopyButton';
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col font-sans">
       {/* Hero Section */}
-      <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <main className="flex flex-1 flex-col items-center justify-center px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-4xl space-y-8 text-center">
           {/* Logo/Brand */}
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl blur-md opacity-50"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <span className="text-white font-bold text-2xl sm:text-3xl">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 opacity-50 blur-md"></div>
+              <div className="relative flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600">
+                <span className="text-2xl font-bold text-white sm:text-3xl">
                   P
                 </span>
               </div>
@@ -20,48 +20,48 @@ export default function Home() {
           </div>
 
           {/* Title */}
-          <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400">
               Photon Next
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            A modern, production-ready Next.js 15 starter template built with
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl dark:text-gray-300">
+            A modern, production-ready Next.js 16 starter template built with
             React 19, TypeScript, and Tailwind CSS v4
           </p>
 
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-black dark:bg-white"></span>
-              Next.js 15
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-black/[.05] px-3 py-1.5 text-sm font-medium dark:bg-white/[.06]">
+              <span className="h-2 w-2 rounded-full bg-black dark:bg-white"></span>
+              Next.js 16
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-black/[.05] px-3 py-1.5 text-sm font-medium dark:bg-white/[.06]">
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
               React 19
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-black/[.05] px-3 py-1.5 text-sm font-medium dark:bg-white/[.06]">
+              <span className="h-2 w-2 rounded-full bg-blue-600"></span>
               TypeScript
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/[.05] dark:bg-white/[.06] text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-black/[.05] px-3 py-1.5 text-sm font-medium dark:bg-white/[.06]">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
               Tailwind v4
             </span>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
+          <div className="flex flex-col items-center justify-center gap-4 pt-8 sm:flex-row">
             <a
-              className="group rounded-full border-2 border-solid border-transparent transition-all flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white gap-2 hover:shadow-lg hover:shadow-blue-500/50 dark:hover:shadow-purple-500/50 hover:scale-105 font-semibold text-sm sm:text-base h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto"
+              className="group flex h-12 w-full items-center justify-center gap-2 rounded-full border-2 border-solid border-transparent bg-gradient-to-r from-blue-600 to-purple-600 px-6 text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 sm:h-14 sm:w-auto sm:px-8 sm:text-base dark:hover:shadow-purple-500/50"
               href="https://github.com/AungMyoKyaw/photon-next"
               target="_blank"
               rel="noopener noreferrer"
             >
               <svg
-                className="w-5 h-5"
+                className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -75,7 +75,7 @@ export default function Home() {
               Use This Template
             </a>
             <a
-              className="rounded-full border-2 border-solid border-black/[.08] dark:border-white/[.145] transition-all flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-black/[.15] dark:hover:border-white/[.25] font-semibold text-sm sm:text-base h-12 sm:h-14 px-6 sm:px-8 w-full sm:w-auto"
+              className="flex h-12 w-full items-center justify-center rounded-full border-2 border-solid border-black/[.08] px-6 text-sm font-semibold transition-all hover:border-black/[.15] hover:bg-[#f2f2f2] sm:h-14 sm:w-auto sm:px-8 sm:text-base dark:border-white/[.145] dark:hover:border-white/[.25] dark:hover:bg-[#1a1a1a]"
               href="https://github.com/AungMyoKyaw/photon-next#readme"
               target="_blank"
               rel="noopener noreferrer"
@@ -85,20 +85,20 @@ export default function Home() {
           </div>
 
           {/* Quick Start Code */}
-          <div className="pt-8 max-w-2xl mx-auto">
-            <div className="bg-black/[.03] dark:bg-white/[.04] rounded-2xl p-6 border border-black/[.08] dark:border-white/[.08]">
-              <div className="flex items-center justify-between mb-4">
+          <div className="mx-auto max-w-2xl pt-8">
+            <div className="rounded-2xl border border-black/[.08] bg-black/[.03] p-6 dark:border-white/[.08] dark:bg-white/[.04]">
+              <div className="mb-4 flex items-center justify-between">
                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                   Quick Start
                 </span>
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+                  <div className="h-3 w-3 rounded-full bg-red-500/80"></div>
+                  <div className="h-3 w-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="h-3 w-3 rounded-full bg-green-500/80"></div>
                 </div>
               </div>
               <div className="relative">
-                <code className="font-mono text-sm sm:text-base text-left block text-gray-800 dark:text-gray-200">
+                <code className="block text-left font-mono text-sm text-gray-800 sm:text-base dark:text-gray-200">
                   <span className="text-purple-600 dark:text-purple-400">
                     npx
                   </span>{' '}
@@ -116,7 +116,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0 p-2">
                   <CopyButton
                     text="npx create-next-app --example https://github.com/AungMyoKyaw/photon-next my-app"
-                    className="bg-white/90 dark:bg-black/90 backdrop-blur-sm border-white/20 dark:border-black/20 shadow-sm"
+                    className="border-white/20 bg-white/90 shadow-sm backdrop-blur-sm dark:border-black/20 dark:bg-black/90"
                   />
                 </div>
               </div>
@@ -124,12 +124,12 @@ export default function Home() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-16 max-w-5xl mx-auto">
-            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 pt-16 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="group rounded-2xl border border-black/[.08] bg-black/[.02] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-black/[.12] hover:shadow-lg hover:shadow-blue-500/5 dark:border-white/[.08] dark:bg-white/[.02] dark:hover:border-white/[.12] dark:hover:shadow-blue-500/10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/20">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500/15 group-hover:shadow-lg group-hover:shadow-blue-500/20">
                   <svg
-                    className="w-7 h-7 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300"
+                    className="h-7 w-7 text-blue-600 transition-colors duration-300 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -142,19 +142,21 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Lightning Fast</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Built with Turbopack for blazing fast development and optimized
-                  production builds
+                <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-gray-100">
+                  Lightning Fast
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  Built with Turbopack for blazing fast development and
+                  optimized production builds
                 </p>
               </div>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-purple-500/5 dark:hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-1">
+            <div className="group rounded-2xl border border-black/[.08] bg-black/[.02] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-black/[.12] hover:shadow-lg hover:shadow-purple-500/5 dark:border-white/[.08] dark:bg-white/[.02] dark:hover:border-white/[.12] dark:hover:shadow-purple-500/10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/20">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-purple-500/15 group-hover:shadow-lg group-hover:shadow-purple-500/20">
                   <svg
-                    className="w-7 h-7 text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors duration-300"
+                    className="h-7 w-7 text-purple-600 transition-colors duration-300 group-hover:text-purple-700 dark:text-purple-400 dark:group-hover:text-purple-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -167,19 +169,21 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Type-Safe</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-gray-100">
+                  Type-Safe
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   Full TypeScript support with strict mode for robust,
                   maintainable code
                 </p>
               </div>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-black/[.02] dark:bg-white/[.02] border border-black/[.08] dark:border-white/[.08] hover:border-black/[.12] dark:hover:border-white/[.12] hover:shadow-lg hover:shadow-cyan-500/5 dark:hover:shadow-cyan-500/10 transition-all duration-300 hover:-translate-y-1">
+            <div className="group rounded-2xl border border-black/[.08] bg-black/[.02] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-black/[.12] hover:shadow-lg hover:shadow-cyan-500/5 dark:border-white/[.08] dark:bg-white/[.02] dark:hover:border-white/[.12] dark:hover:shadow-cyan-500/10">
               <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:bg-cyan-500/15 group-hover:scale-110 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/20">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-cyan-500/15 group-hover:shadow-lg group-hover:shadow-cyan-500/20">
                   <svg
-                    className="w-7 h-7 text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 transition-colors duration-300"
+                    className="h-7 w-7 text-cyan-600 transition-colors duration-300 group-hover:text-cyan-700 dark:text-cyan-400 dark:group-hover:text-cyan-300"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -192,8 +196,10 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-xl mb-3 text-gray-900 dark:text-gray-100">Modern Styling</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-gray-100">
+                  Modern Styling
+                </h3>
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   Tailwind CSS v4 with dark mode and custom theme system out of
                   the box
                 </p>
@@ -204,9 +210,9 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-black/[.08] dark:border-white/[.08] py-8">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer className="border-t border-black/[.08] py-8 dark:border-white/[.08]">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
               <span>Built with</span>
               <Image
@@ -219,13 +225,13 @@ export default function Home() {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-6">
               <a
-                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                 href="https://github.com/AungMyoKyaw/photon-next"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -239,7 +245,7 @@ export default function Home() {
                 GitHub
               </a>
               <a
-                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                 href="https://nextjs.org/docs"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -254,7 +260,7 @@ export default function Home() {
                 Docs
               </a>
               <a
-                className="flex items-center gap-2 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="flex items-center gap-2 text-sm transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                 href="https://vercel.com"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -15,7 +15,7 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
       await navigator.clipboard.writeText(text);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
+    } catch {
       // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = text;
@@ -36,17 +36,17 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
   return (
     <button
       onClick={handleCopy}
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-medium transition-all duration-200 hover:scale-105 ${
+      className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium transition-all duration-200 hover:scale-105 ${
         copied
-          ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800 shadow-green-500/20'
-          : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-md'
+          ? 'border border-green-200 bg-green-100 text-green-700 shadow-green-500/20 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300'
+          : 'border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
       } ${className}`}
       title={copied ? 'Copied!' : 'Copy command'}
     >
       {copied ? (
         <>
           <svg
-            className="w-3.5 h-3.5"
+            className="h-3.5 w-3.5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -63,7 +63,7 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
       ) : (
         <>
           <svg
-            className="w-3.5 h-3.5"
+            className="h-3.5 w-3.5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

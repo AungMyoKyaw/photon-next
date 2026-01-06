@@ -1,9 +1,9 @@
 # Photon Next
 
-A modern, production-ready Next.js 15 starter template built with React 19, TypeScript, and Tailwind CSS v4. This template provides a solid foundation for building high-performance web applications with the latest technologies and best practices.
+A modern, production-ready Next.js 16 starter template built with React 19, TypeScript, and Tailwind CSS v4. This template provides a solid foundation for building high-performance web applications with the latest technologies and best practices.
 
-![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black?logo=next.js)
-![React](https://img.shields.io/badge/React-19.1.0-blue?logo=react)
+![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19.2.3-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC?logo=tailwindcss)
 ![Template](https://img.shields.io/badge/Template-Ready-green)
@@ -36,8 +36,8 @@ npm install
 
 ## Features
 
-- **Next.js 15.5.4** with App Router for enhanced routing and layouts
-- **React 19.1.0** with latest features and optimizations
+- **Next.js 16.1.1** with App Router for enhanced routing and layouts
+- **React 19.2.3** with latest features and optimizations
 - **TypeScript** for type-safe development
 - **Tailwind CSS v4** with modern styling system
 - **Turbopack** for lightning-fast development builds
@@ -48,8 +48,8 @@ npm install
 
 ## What's Included in This Template
 
-- ✅ **Next.js 15.5.4** with App Router configured
-- ✅ **React 19.1.0** with latest features
+- ✅ **Next.js 16.1.1** with App Router configured
+- ✅ **React 19.2.3** with latest features
 - ✅ **TypeScript** configuration with strict mode
 - ✅ **Tailwind CSS v4** with dark mode support
 - ✅ **ESLint** and **Prettier** for code quality
@@ -185,7 +185,7 @@ photon-next/
 
 ### Core Framework
 
-- **Next.js 15.5.4** - React framework with App Router
+- **Next.js 16.1.1** - React framework with App Router
 - **React 19.1.0** - UI library with latest features
 - **TypeScript 5** - Static type checking
 
@@ -326,4 +326,4 @@ This template is licensed under the MIT License - see the [LICENSE](LICENSE) fil
 
 🚀 **Start building your next project with this template!**
 
-Built with ❤️ using Next.js 15, React 19, and Tailwind CSS v4
+Built with ❤️ using Next.js 16, React 19, and Tailwind CSS v4
