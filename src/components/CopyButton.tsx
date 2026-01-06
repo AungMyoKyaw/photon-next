@@ -16,7 +16,6 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = text;
       document.body.appendChild(textArea);
@@ -36,10 +35,10 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
   return (
     <button
       onClick={handleCopy}
-      className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium transition-all duration-200 hover:scale-105 ${
+      className={`inline-flex items-center gap-1.5 px-3 py-1.5 font-mono text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:scale-105 active:scale-95 ${
         copied
-          ? 'border border-green-200 bg-green-100 text-green-700 shadow-green-500/20 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300'
-          : 'border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
+          ? 'border border-green-500 bg-green-500 text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
+          : 'border border-foreground/20 bg-surface hover:border-foreground hover:bg-foreground hover:text-background hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]'
       } ${className}`}
       title={copied ? 'Copied!' : 'Copy command'}
     >
@@ -50,11 +49,11 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            strokeWidth={2}
+            strokeWidth={3}
           >
             <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
               d="M5 13l4 4L19 7"
             />
           </svg>
@@ -70,8 +69,8 @@ export default function CopyButton({ text, className = '' }: CopyButtonProps) {
             strokeWidth={2}
           >
             <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
               d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
             />
           </svg>

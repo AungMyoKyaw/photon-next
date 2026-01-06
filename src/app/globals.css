@@ -1,26 +1,167 @@
 @import 'tailwindcss';
 
 :root {
+  /* Neo-Brutalist / Cyber Palette */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #050505;
+  --accent-primary: #0000ff; /* Electric Blue */
+  --accent-secondary: #ff00ff; /* Neon Magenta */
+  --surface: #f0f0f0;
+  --border: #050505;
+
+  /* Grid settings */
+  --grid-color: rgba(0, 0, 0, 0.05);
+  --grid-size: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #050505;
+    --foreground: #ffffff;
+    --accent-primary: #00f0ff; /* Cyan */
+    --accent-secondary: #bc13fe; /* Purple */
+    --surface: #111111;
+    --border: #333333;
+
+    --grid-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-surface: var(--surface);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-jakarta);
+  --font-mono: var(--font-jetbrains);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cyber Grid Background */
+.bg-cyber-grid {
+  background-size: var(--grid-size) var(--grid-size);
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(25px);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-scan {
+  animation: scan-line 8s linear infinite;
+}
+
+.animate-reveal {
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Brutalist Utilities */
+.brutalist-border {
+  border: 2px solid var(--foreground);
+}
+
+.brutalist-shadow {
+  box-shadow: 4px 4px 0px 0px var(--foreground);
+}
+
+.brutalist-shadow-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--foreground);
+}
+
+.brutalist-shadow-active:active {
+  transform: translate(0px, 0px);
+  box-shadow: 0px 0px 0px 0px var(--foreground);
+}
+
+/* Gradient Mesh */
+.gradient-mesh {
+  background:
+    radial-gradient(at 0% 0%, var(--accent-primary) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--accent-secondary) 0px, transparent 50%);
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 2px solid var(--background);
+  border-radius: 4px;
 }
