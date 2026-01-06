@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import CopyButton from '@/components/CopyButton';
 
 export default function Home() {
