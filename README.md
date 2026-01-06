@@ -10,8 +10,8 @@ Designed with a **Neo-Brutalist / Cyber** aesthetic, this template provides a hi
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC?logo=tailwindcss&style=flat-square)
 ![Turbopack](https://img.shields.io/badge/Turbopack-Enabled-red?style=flat-square)
 
-**Repository:** [https://github.com/AungMyoKyaw/photon-next](https://github.com/AungMyoKyaw/photon-next)
-**Live Demo:** [https://photon-next.vercel.app/](https://photon-next.vercel.app/)
+- **Repository:** [https://github.com/AungMyoKyaw/photon-next](https://github.com/AungMyoKyaw/photon-next)
+- **Live Demo:** [https://photon-next.vercel.app/](https://photon-next.vercel.app/)
 
 ## 🚀 Quick Start
 
