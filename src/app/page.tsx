@@ -242,8 +242,22 @@ export default function Home() {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <div className="flex items-center justify-center gap-2 md:justify-start">
-              <div className="flex h-6 w-6 items-center justify-center rounded-md bg-gradient-to-br from-blue-500 to-purple-600 text-xs font-bold text-white">
-                P
+              <div className="relative flex h-8 w-8 items-center justify-center transition-transform duration-300 hover:scale-110">
+                <svg
+                  className="h-full w-full"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 4V20" className="stroke-accent-primary" />
+                  <path
+                    d="M11 5H14C16.7614 5 19 7.23858 19 10C19 12.7614 16.7614 15 14 15H11"
+                    className="stroke-accent-secondary"
+                  />
+                </svg>
               </div>
               <p className="text-center text-base text-foreground/60">
                 &copy; {new Date().getFullYear()} Photon Next. Open Source.
