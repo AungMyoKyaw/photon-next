@@ -7,48 +7,48 @@ export default function Home() {
       <div className="gradient-mesh fixed top-0 left-0 -z-10 h-full w-full"></div>
       <div className="animate-scan pointer-events-none fixed inset-0 -z-10 h-[200%] bg-gradient-to-b from-transparent via-accent-primary/5 to-transparent"></div>
 
-      <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20">
+      <main className="relative flex min-h-screen flex-col items-center justify-center px-5 py-16 sm:px-6 md:px-8 lg:py-20">
         <div className="animate-float absolute top-20 left-10 hidden h-24 w-24 rounded-full border border-accent-primary/20 delay-100 lg:block"></div>
         <div className="animate-float absolute right-10 bottom-40 hidden h-32 w-32 rounded-full border border-accent-secondary/20 delay-300 lg:block"></div>
         <div className="animate-pulse-glow absolute top-1/3 right-1/4 hidden h-4 w-4 rounded-full bg-accent-primary md:block"></div>
 
-        <div className="z-10 mx-auto w-full max-w-6xl space-y-16 text-center">
-          <div className="animate-reveal space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-surface/50 px-4 py-2 backdrop-blur-md">
+        <div className="z-10 mx-auto w-full max-w-6xl space-y-12 text-center sm:space-y-14 lg:space-y-16">
+          <div className="animate-reveal space-y-6 sm:space-y-7 lg:space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-surface/50 px-3.5 py-2 backdrop-blur-md sm:px-4">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-primary opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent-primary"></span>
               </span>
-              <span className="font-mono text-xs font-medium tracking-wider text-foreground/70 uppercase">
+              <span className="font-mono text-[10px] font-medium tracking-wider text-foreground/70 uppercase sm:text-xs">
                 v1.0.0 Public Release
               </span>
             </div>
 
-            <div className="relative inline-block">
-              <h1 className="mix-blend-mode-multiply dark:mix-blend-mode-normal font-display text-6xl leading-none font-bold tracking-tighter text-foreground sm:text-7xl md:text-9xl">
+            <div className="relative inline-block px-4 sm:px-0">
+              <h1 className="mix-blend-mode-multiply dark:mix-blend-mode-normal font-display text-[clamp(3rem,12vw,5rem)] leading-[0.9] font-bold tracking-tighter text-foreground sm:text-[clamp(4rem,10vw,6rem)] lg:text-[clamp(6rem,8vw,8rem)]">
                 PHOTON
                 <span className="animate-pulse-glow block bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text text-transparent">
                   NEXT
                 </span>
               </h1>
-              <span className="absolute top-0 -left-8 hidden font-mono text-6xl font-thin text-foreground/10 sm:block md:text-8xl">
+              <span className="absolute top-0 -left-4 font-mono text-[clamp(2.5rem,10vw,4rem)] font-thin text-foreground/10 sm:-left-6 sm:text-[clamp(3rem,8vw,5rem)] lg:-left-8 lg:text-[clamp(4rem,7vw,6rem)]">
                 {'['}
               </span>
-              <span className="absolute top-0 -right-8 hidden font-mono text-6xl font-thin text-foreground/10 sm:block md:text-8xl">
+              <span className="absolute top-0 -right-4 font-mono text-[clamp(2.5rem,10vw,4rem)] font-thin text-foreground/10 sm:-right-6 sm:text-[clamp(3rem,8vw,5rem)] lg:-right-8 lg:text-[clamp(4rem,7vw,6rem)]">
                 {']'}
               </span>
             </div>
 
-            <p className="mx-auto max-w-2xl font-body text-lg leading-relaxed text-foreground/60 sm:text-xl">
+            <p className="mx-auto max-w-2xl px-4 font-body text-base leading-relaxed text-foreground/60 sm:px-0 sm:text-lg lg:text-xl">
               The ultimate{' '}
               <span className="font-bold text-foreground">Next.js 16</span>{' '}
               starter kit. Forged with React 19, TypeScript, and Tailwind v4.
-              <span className="mt-2 block font-serif italic">
+              <span className="mt-2 block font-serif text-sm italic sm:text-base">
                 Brutally efficient. Visually striking.
               </span>
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+            <div className="flex flex-wrap items-center justify-center gap-2.5 px-4 pt-2 sm:gap-3 sm:px-0 sm:pt-4">
               {[
                 { name: 'Next.js 16', color: 'bg-foreground text-background' },
                 { name: 'React 19', color: 'bg-blue-600 text-white' },
@@ -57,23 +57,23 @@ export default function Home() {
               ].map((tech) => (
                 <div
                   key={tech.name}
-                  className={`transform px-4 py-2 font-mono text-sm font-bold tracking-wide uppercase shadow-sm transition-transform duration-200 hover:-translate-y-1 ${tech.color}`}
+                  className={`transform px-3 py-1.5 font-mono text-[11px] font-bold tracking-wide uppercase shadow-sm transition-transform duration-200 hover:-translate-y-1 active:translate-y-0 sm:px-4 sm:py-2 sm:text-xs ${tech.color}`}
                 >
                   {tech.name}
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-6 pt-8 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-4 px-4 pt-6 sm:flex-row sm:gap-6 sm:px-0 sm:pt-8">
               <a
                 href="https://github.com/AungMyoKyaw/photon-next"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group brutalist-shadow brutalist-shadow-hover relative w-full bg-foreground px-8 py-4 font-mono text-sm font-bold tracking-wider text-background uppercase transition-colors duration-300 hover:bg-accent-primary sm:w-auto"
+                className="group brutalist-shadow brutalist-shadow-hover relative min-h-[44px] w-full bg-foreground px-6 py-3 font-mono text-xs font-bold tracking-wider text-background uppercase transition-all duration-300 hover:bg-accent-primary active:translate-x-0 active:translate-y-0 active:shadow-none sm:w-auto sm:px-8 sm:py-4 sm:text-sm"
               >
                 <span className="flex items-center justify-center gap-2">
                   <svg
-                    className="h-5 w-5"
+                    className="h-4 w-4 sm:h-5 sm:w-5"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -89,42 +89,48 @@ export default function Home() {
               </a>
               <a
                 href="#docs"
-                className="w-full border-2 border-foreground bg-transparent px-8 py-4 font-mono text-sm font-bold tracking-wider text-foreground uppercase transition-all duration-300 hover:bg-foreground hover:text-background sm:w-auto"
+                className="min-h-[44px] w-full border-2 border-foreground bg-transparent px-6 py-3 font-mono text-xs font-bold tracking-wider text-foreground uppercase transition-all duration-300 hover:bg-foreground hover:text-background active:bg-foreground/90 sm:w-auto sm:px-8 sm:py-4 sm:text-sm"
               >
                 View Documentation
               </a>
             </div>
           </div>
 
-          <div className="animate-reveal mx-auto max-w-3xl pt-12 delay-200">
+          <div className="animate-reveal mx-auto max-w-3xl px-4 pt-8 delay-200 sm:px-6 lg:pt-12">
             <div className="group relative overflow-hidden rounded-lg border-2 border-foreground bg-[#0a0a0a] text-left shadow-2xl">
-              <div className="flex items-center justify-between border-b border-[#333] bg-[#1a1a1a] px-4 py-2">
-                <div className="flex gap-2">
-                  <div className="h-3 w-3 rounded-full bg-red-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
-                  <div className="h-3 w-3 rounded-full bg-green-500"></div>
+              <div className="flex items-center justify-between border-b border-[#333] bg-[#1a1a1a] px-3 py-2 sm:px-4">
+                <div className="flex gap-1.5 sm:gap-2">
+                  <div className="h-2.5 w-2.5 rounded-full bg-red-500 sm:h-3 sm:w-3"></div>
+                  <div className="h-2.5 w-2.5 rounded-full bg-yellow-500 sm:h-3 sm:w-3"></div>
+                  <div className="h-2.5 w-2.5 rounded-full bg-green-500 sm:h-3 sm:w-3"></div>
                 </div>
-                <div className="font-mono text-xs text-gray-400">
+                <div className="font-mono text-[10px] text-gray-400 sm:text-xs">
                   bash — 80x24
                 </div>
               </div>
 
-              <div className="relative p-6 font-mono text-sm sm:text-base">
+              <div className="relative overflow-x-auto p-4 font-mono text-xs sm:p-6 sm:text-sm lg:text-base">
                 <div className="mb-2 flex items-center gap-2 text-green-400">
                   <span>➜</span>
                   <span className="text-blue-400">~</span>
-                  <span>create-next-app</span>
+                  <span className="hidden sm:inline">create-next-app</span>
                 </div>
-                <div className="flex flex-col gap-2 text-gray-300 sm:flex-row sm:items-center">
-                  <span className="text-purple-400">npx</span>
-                  <span>create-next-app</span>
-                  <span className="text-gray-500">--example</span>
-                  <span className="whitespace-nowrap">
-                    https://github.com/AungMyoKyaw/photon-next
-                  </span>
+                <div className="flex flex-col gap-1 text-gray-300 sm:gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <span className="text-purple-400">npx</span>
+                    <span className="text-sm sm:text-base">
+                      create-next-app
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap items-start gap-1.5 pl-0 sm:gap-2 sm:pl-4">
+                    <span className="text-gray-500">--example</span>
+                    <span className="text-xs break-all sm:text-sm">
+                      https://github.com/AungMyoKyaw/photon-next
+                    </span>
+                  </div>
                 </div>
 
-                <div className="absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100">
+                <div className="absolute top-3 right-3 opacity-0 transition-opacity group-hover:opacity-100 sm:top-4 sm:right-4">
                   <CopyButton
                     text="npx create-next-app --example https://github.com/AungMyoKyaw/photon-next my-app"
                     className="border-[#444] bg-[#2a2a2a] text-white hover:bg-[#333]"
@@ -134,14 +140,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="animate-reveal grid grid-cols-1 gap-6 pt-20 delay-300 md:grid-cols-3">
+          <div className="animate-reveal grid grid-cols-1 gap-4 px-4 pt-12 delay-300 sm:gap-5 sm:px-6 md:grid-cols-3 md:gap-6 lg:pt-20">
             {[
               {
                 title: 'Lightning Fast',
                 desc: 'Turbopack powered. 53% faster startup. 94% faster updates.',
                 icon: (
                   <svg
-                    className="h-8 w-8"
+                    className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -161,7 +167,7 @@ export default function Home() {
                 desc: 'Strict TypeScript. No more runtime errors. Sleep better.',
                 icon: (
                   <svg
-                    className="h-8 w-8"
+                    className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -181,7 +187,7 @@ export default function Home() {
                 desc: 'Tailwind v4. React 19. Next 16. The bleeding edge, tamed.',
                 icon: (
                   <svg
-                    className="h-8 w-8"
+                    className="h-6 w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -199,17 +205,17 @@ export default function Home() {
             ].map((feature, i) => (
               <div
                 key={i}
-                className="group border-2 border-foreground/5 bg-surface/30 p-8 text-left backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-foreground hover:shadow-xl"
+                className="group border-2 border-foreground/5 bg-surface/30 p-6 text-left backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-foreground hover:shadow-xl active:translate-y-0 sm:p-7 lg:p-8"
               >
                 <div
-                  className={`mb-4 inline-block rounded-lg bg-foreground/5 p-3 text-foreground ${feature.accent} transition-colors`}
+                  className={`mb-3 inline-block rounded-lg bg-foreground/5 p-2.5 text-foreground transition-colors sm:mb-4 sm:p-3 ${feature.accent}`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="mb-2 font-display text-xl font-bold">
+                <h3 className="mb-2 font-display text-lg font-bold sm:text-xl">
                   {feature.title}
                 </h3>
-                <p className="font-body text-sm leading-relaxed text-foreground/70">
+                <p className="font-body text-sm leading-relaxed text-foreground/70 sm:text-base">
                   {feature.desc}
                 </p>
               </div>
@@ -219,11 +225,12 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-foreground/10 bg-surface/50 backdrop-blur-md">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 sm:py-12 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             <a
               href="https://github.com/AungMyoKyaw/photon-next"
-              className="text-foreground/60 hover:text-foreground"
+              className="text-foreground/60 transition-colors hover:text-foreground"
+              aria-label="GitHub Repository"
             >
               <span className="sr-only">GitHub</span>
               <svg
@@ -242,7 +249,7 @@ export default function Home() {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <div className="flex items-center justify-center gap-2 md:justify-start">
-              <div className="relative flex h-8 w-8 items-center justify-center transition-transform duration-300 hover:scale-110">
+              <div className="relative flex h-7 w-7 items-center justify-center transition-transform duration-300 hover:scale-110 sm:h-8 sm:w-8">
                 <svg
                   className="h-full w-full"
                   viewBox="0 0 24 24"
@@ -259,7 +266,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <p className="text-center text-base text-foreground/60">
+              <p className="text-center text-sm text-foreground/60 sm:text-base">
                 &copy; {new Date().getFullYear()} Photon Next. Open Source.
               </p>
             </div>

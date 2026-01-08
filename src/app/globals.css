@@ -115,6 +115,27 @@ body {
   opacity: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-scan {
+    animation: none;
+  }
+
+  .animate-reveal {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 .delay-100 {
   animation-delay: 100ms;
 }
@@ -134,6 +155,12 @@ body {
   box-shadow: 4px 4px 0px 0px var(--foreground);
 }
 
+.brutalist-shadow-hover {
+  transition:
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
 .brutalist-shadow-hover:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px 0px var(--foreground);
@@ -144,6 +171,17 @@ body {
   box-shadow: 0px 0px 0px 0px var(--foreground);
 }
 
+@media (max-width: 640px) {
+  .brutalist-shadow {
+    box-shadow: 3px 3px 0px 0px var(--foreground);
+  }
+
+  .brutalist-shadow-hover:hover {
+    transform: translate(-1.5px, -1.5px);
+    box-shadow: 4.5px 4.5px 0px 0px var(--foreground);
+  }
+}
+
 /* Gradient Mesh */
 .gradient-mesh {
   background:
@@ -151,6 +189,29 @@ body {
     radial-gradient(at 100% 0%, var(--accent-secondary) 0px, transparent 50%);
   filter: blur(80px);
   opacity: 0.15;
+}
+
+@media (max-width: 768px) {
+  .gradient-mesh {
+    filter: blur(40px);
+  }
+
+  .animate-pulse-glow {
+    animation: none;
+  }
+
+  .bg-cyber-grid {
+    opacity: 0.2;
+  }
+}
+
+/* Touch target optimization */
+@media (hover: none) and (pointer: coarse) {
+  a,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Scrollbar */
