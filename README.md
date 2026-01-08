@@ -52,7 +52,7 @@ Visit [http://localhost:3000](http://localhost:3000) to see your app.
 - **Tailwind CSS v4**: The new high-performance, CSS-first styling engine.
 - **TypeScript 5**: Strict type safety and modern JavaScript features.
 - **Turbopack**: Lightning-fast incremental builds (53% faster startup).
-- **Geist Fonts**: Optimized generic sans and mono fonts by Vercel.
+- **Modern Fonts**: Space Grotesk (display), Plus Jakarta Sans (body), and JetBrains Mono (code).
 
 ## 🎨 Design System: Neo-Brutalist / Cyber
 
@@ -71,17 +71,42 @@ This template features a bold, high-contrast design system defined entirely in C
 
 ### Tailwind CSS v4 (CSS-First)
 
-Unlike v3, **there is no `tailwind.config.ts`**. All configuration is handled directly in `src/app/globals.css` using the new `@theme` directive.
+Unlike v3, **there is no `tailwind.config.ts`**. All configuration is handled directly in `src/app/globals.css` using the new `@theme` directive and CSS custom properties.
 
-**To customize colors:**
+**To customize colors and theme:**
 Edit `src/app/globals.css`:
 
 ```css
+:root {
+  /* Neo-Brutalist / Cyber Palette */
+  --background: #ffffff;
+  --foreground: #050505;
+  --accent-primary: #0000ff; /* Electric Blue */
+  --accent-secondary: #ff00ff; /* Neon Magenta */
+  --surface: #f0f0f0;
+  --border: #050505;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #050505;
+    --foreground: #ffffff;
+    --accent-primary: #00f0ff; /* Cyan */
+    --accent-secondary: #bc13fe; /* Purple */
+    --surface: #111111;
+    --border: #333333;
+  }
+}
+
 @theme inline {
-  /* Define your design tokens here */
   --color-background: var(--background);
-  --color-accent-primary: #0000ff; /* Change this */
+  --color-foreground: var(--foreground);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-surface: var(--surface);
   --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-jakarta);
+  --font-mono: var(--font-jetbrains);
 }
 ```
 
